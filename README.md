@@ -1,7 +1,5 @@
 # 🌊 My Portfolio | Meu Portfólio
 
-> Where creativity meets code — welcome to my corner of the web!
-
 <p align="center">
   <!-- Troque YOUR_PORTFOLIO_URL pelo link do seu portfolio -->
   <a href="https://nivea18.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">
