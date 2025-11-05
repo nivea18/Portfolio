@@ -1,8 +1,4 @@
-<h1 align="center">
-  My Portfolio | Meu Portfólio
-</h1>
-
-# 🌊 My Portfolio
+# 🌊 My Portfolio | Meu Portfólio
 
 > Where creativity meets code — welcome to my corner of the web!
 
@@ -22,10 +18,3 @@
 - Projetos favoritos: **Coastal Heaven**, **Travel UI mockups**, **Interactive Gallery**.
 
 ---
-
-## 🚀 Como usar este repositório
-1. Substitua `https://YOUR_PORTFOLIO_URL` no botão acima pelo link real do seu portfolio (ex.: `https://nivea.github.io/portfolio` ou `https://meuportfolio.com`).
-2. Personalize os destaques na seção **Destaques** com seus projetos.
-3. Adicione imagens ou GIFs das suas páginas dentro do README com:
-   ```markdown
-   ![demo do projeto](./assets/demo.png)
