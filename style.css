@@ -198,6 +198,33 @@ span h2{
     min-width: 280px;
 }
 
+.btn-area {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.translate-btn {
+    border: 2px solid #c2185b;
+    background: transparent;
+    color: #c2185b;
+    padding: 13px 30px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 20px;
+}
+
+.translate-btn:hover {
+    background: #c2185b;
+    color: black;
+}
+
+
+
 .typing-text span {
     position: relative;
 }
@@ -227,7 +254,7 @@ span h2{
 
 @keyframes words {
     0%, 20% {
-        content: "Desenvolvedora Web";
+        content: "Freelancer";
     }
     21%, 40% {
         content: "Web Designer";
