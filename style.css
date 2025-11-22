@@ -204,27 +204,6 @@ span h2{
     margin-top: 20px;
 }
 
-.translate-btn {
-    border: 2px solid #c2185b;
-    background: transparent;
-    color: #c2185b;
-    padding: 13px 30px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 5px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    margin-left: 20px;
-}
-
-.translate-btn:hover {
-    background: #c2185b;
-    color: black;
-}
-
-
-
 .typing-text span {
     position: relative;
 }
@@ -494,6 +473,851 @@ span h2{
     margin-bottom: 40px; /* Espaço antes da grade de projetos */
     opacity: 0.9;
     font-weight: 900;
+}
+
+/* Grid de Projetos */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+/* Card de Projeto */
+.project-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-image-wrapper {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-info {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-info h3 {
+    font-size: 1.8em;
+    color: #e7707e;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.project-tags {
+    margin-bottom: 15px;
+}
+
+.project-tags span {
+    display: inline-block;
+    background-color: #ebb4c3;
+    color: #020000;
+    font-weight: 500;
+    font-size: .85em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    flex: 1;
+}
+
+.btn.primary {
+    background-color: #df6a89;
+    color: #fff;
+    border: 2px solid #db2b5a;
+}
+
+.btn.primary:hover {
+    background-color: #ffff;
+    border-color: #f63ea0;
+    color: #df6a89;
+}
+
+.btn.secondary {
+    background-color: #ee8fa8;
+    color: #ffffff;
+    border: 2px solid #db2b5a;
+}
+
+.btn.secondary:hover {
+    background-color: #ffffff;
+    color: #f63ea0;
+    border-color: #f63ea0;
+}
+
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.5em;
+    }
+
+    .page-subtitle {
+        font-size: 1em;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        margin: 0 auto;
+        max-width: 450px;
+    }
+
+    .project-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+/* HABILIDADES */
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px;
+    padding: 40px 0;
+    justify-content: center; 
+    align-items: flex-start;
+}
+
+.skill-item {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.skill-name {
+    font-weight: 600;
+    color: #fb7da7;
+    width: 100%; /* Ocupa a linha inteira em telas pequenas */
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.skill-bar-container {
+    flex-grow: 1; /* Ocupa o máximo de espaço possível */
+    height: 12px;
+    background-color: #feabd797;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 100%;
+    border-radius: 6px;
+}
+
+/* Cores das Barras de Progresso */
+.skill-bar.primary {
+    background-color: #3498db; /* Azul Front-End */
+}
+.skill-bar.secondary {
+    background-color: #cc722e; /* Verde Back-End */
+}
+.skill-bar.tertiary {
+    background-color: #f1c40f; /* Amarelo Ferramentas */
+}
+
+.skill-percentage {
+    font-weight: 700;
+    color: #d8285f;
+    font-size: 0.9em;
+    min-width: 40px; /* Garante que o % não quebre a linha */
+    text-align: right;
+}
+
+/* Responsividade para telas menores */
+@media (min-width: 768px) {
+    .skill-name {
+        width: 30%; /* Na desktop, a label ocupa 30% da linha */
+        margin-bottom: 0;
+    }
+
+    .skill-bar-container {
+        max-width: 55%;
+    }
+}
+
+/* --- Estilos da Seção de Soft Skills --- */
+.soft-skills-section {
+    background-color: #1a1a1a; /* Mantendo o contraste com o fundo escuro/claro */
+    padding: 40px 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* Centraliza a caixa na tela grande, se a largura for limitada */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 95%; /* Adapte conforme a largura do seu .container */
+}
+
+.soft-skills-section h2 {
+    color: #ff007f; /* Cor do título principal (igual ao "Minhas Habilidades") */
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.soft-skills-section h2 .fas {
+    margin-right: 10px;
+}
+
+.soft-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza as tags */
+    gap: 15px; /* Espaçamento entre as tags */
+}
+
+.skill-tag {
+    background-color: #2c3e50; /* Um cinza/azul escuro que contrasta */
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 25px; /* Deixa a tag arredondada */
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.skill-tag .fas {
+    margin-right: 8px;
+    color: #f1c40f; /* Cor de destaque (Amarelo) */
+}
+
+.skill-tag:hover {
+    background-color: #3498db; /* Azul no hover para feedback visual */
+}
+
+/* --- Estilos para o CTA (Chamada para Ação) --- */
+
+.cta-container {
+    text-align: center;
+    padding: 30px 0 60px 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-btn.primary {
+    background-color: #ff007f; /* Cor primária de destaque */
+    color: #ffffff;
+}
+
+.cta-btn.secondary {
+    background-color: #3498db; /* Cor secundária (Azul) */
+    color: #ffffff;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    .cta-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cta-btn {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+/* NOVO CONTAINER PRINCIPAL para Hard e Soft Skills */
+.habilidades-container-principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px 0 80px 0; /* Espaçamento maior no final */
+}
+
+/* Estilo Básico para os Blocos Lado a Lado */
+.hard-skills-wrapper,
+.soft-skills-wrapper {
+    background-color: #ffffff00;
+    transition: 0.5s ease;
+    padding: 30px;
+    border-radius: 10px;
+    border: #bc2f6c;
+    box-shadow: 0 6px 15px rgba(239, 78, 126, 0.432);
+    flex: 1 1 700px; /* Garante que os blocos fiquem grandes, mas se ajustem */
+    max-width: 700px; /* Limita o tamanho máximo em telas gigantes */
+}
+
+.hard-skills-wrapper h2,
+.soft-skills-wrapper h2 {
+    color:#9e0b4b;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e0e6eb;
+    padding-bottom: 10px;
+}
+
+/* Estilo da Lista de Soft Skills (Mais limpo) */
+.soft-skills-list {
+    display: flex;
+    flex-direction: column; /* Lista vertical */
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.soft-skill-item {
+    font-size: 2.2em;
+    color: #fb7da7;
+    padding-left: 10px;
+    border-left: 3px solid #ffffff; /* Um toque de cor para cada item */
+}
+
+.soft-skill-item .fas {
+    margin-right: 10px;
+    color: #fb7da7; /* Cor do título principal para destaque */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 1000px) {
+    .hard-skills-wrapper,
+    .soft-skills-wrapper {
+        flex: 1 1 100%; /* Blocos ocupam 100% da largura em telas menores */
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+header {
+    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9% ;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: rgb(175, 0, 99);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: rgb(175, 0, 99);
+    border-bottom: 3px solid rgb(175, 0, 99);
+}
+
+@media(max-width:995px) {
+    nav {
+        position: absolute;
+        display: none;
+        top: 0%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid rgb(175, 0, 99);
+        border-bottom: 3px solid rgb(175, 0, 99);
+        border-bottom-left-radius: 2rem;
+        padding: 1rem solid;
+        background-color: rgb(0, 0, 0);
+        border-top: 0.1rem solid #000000;
+    }
+
+    nav.active{
+        display: block;
+    }
+    nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    
+    nav a:hover,
+    nav a.active {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid #9f0947;
+    }
+}
+
+section {
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: black;
+}
+
+.home .home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span {
+    color: #9f0947;
+}
+span h2{
+    color: white;
+}
+
+.home-content p {
+    font-size: 1.7rem;
+}
+
+.home-content h3 {
+    font-size: 7rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-img {
+    border-radius: 50%;
+}
+
+.home-img img {
+    position: relative;
+    width: 40vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #9f0947;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+    color:#9f0947;
+}
+
+.social-icons a:hover {
+    color: black;
+    transform: scale(1.3) translateY(-5px); 
+    background-color: #9f0947;
+    box-shadow: 0 0 25px #9f0947;
+}
+
+.btn-contrate {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.3rem;
+    color: #9f0947;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #9f0947;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-contrate:hover {
+    transform: scale3d(1.03);
+    background-color: #9f0947;
+    color: #000000;
+    box-shadow: 0 0 25px #9f0947;
+}
+
+.typing-text {
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Analista de Sistemas";
+    color: #9f0947;
+    animation: words 6s infinite;
+}
+
+.typing-text span::after {
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 3px solid;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Desenvolvedora Web";
+    }
+    21%, 40% {
+        content: "Web Designer";
+    }
+} 
+
+@media (max-width:1000px) {
+    .home {
+        gap: 4rem;
+    }
+}
+
+@media (max-width:995px) {
+    .home {
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+}
+
+.home .home-content h3 {
+    font-size: 2.5rem;
+}
+
+
+.home-content h1 {
+    font-size: 5rem;
+}
+
+.home-img img {
+    width: 70vh;
+    margin-top: 4rem;
+}
+
+/* EDUCAÇÃO PÁGINA */
+
+.educacao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.educacao img {
+  width: 700px;  
+  height: 700px;  
+  border-radius: 10px;
+  object-fit: cover; 
+}
+
+.educacao p {
+     font-size: 20px;
+     text-align: justify;
+}
+
+.educacao h1 {
+  margin-bottom: 20px; 
+}
+
+.educacao h2 {
+    margin-bottom: 20px;
+}
+
+.educacao img {
+    border-radius: 50%;
+}
+
+.escola {
+  display: flex;
+  align-items: center;
+  gap: 20px;  
+}
+
+.escola img {
+  width: 700px;  
+  height: 700px;  
+  border-radius: 10px;
+  object-fit: cover; 
+}
+
+.escola p {
+     font-size: 20px;
+     text-align: justify;
+}
+
+.escola h1 {
+  margin-bottom: 20px; /* distancia o h1 do parágrafo embaixo */
+}
+
+.escola h2 {
+    margin-bottom: 20px;
+}
+
+.escola img {
+    border-radius: 50%;
+}
+
+/* CONTATO */
+
+/* Seção geral */
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 120px 80px 60px 80px; /* topo maior para afastar do cabeçalho */
+  background-color: black; /* mantive a cor escura */
+  box-sizing: border-box;
+}
+
+/* Container interno */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 60px;
+}
+
+/* Texto à esquerda */
+.contact-text {
+  flex: 1;
+  max-width: 45%;
+}
+
+.contact-text h2 {
+  font-size: 3rem; /* aumentei o título */
+  color: #e91e63;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+.contact-text p {
+  font-size: 1.4rem; 
+  color: #f0f0f0;
+  line-height: 1.8;
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 25px;
+  margin-top: 25px;
+}
+
+/* Formulário à direita */
+#formulario-contato {
+  flex: 1;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 40px; /* dá um espaço extra do topo do container */
+}
+
+/* Labels e inputs */
+#formulario-contato label {
+  font-weight: 600;
+  color:#e91e63;
+  font-size: 15px;
+}
+
+#formulario-contato input,
+#formulario-contato textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #bc2f6c;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#formulario-contato textarea {
+  resize: none;
+}
+
+/* Botão enviar */
+.enviar {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.enviar:hover {
+  background-color: #5b102b;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 900px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px;
+  }
+
+  .contact-text, #formulario-contato {
+    max-width: 100%;
+  }
+
+  #formulario-contato {
+    margin-top: 20px;
+  }
+}
+
+
+/* TRABALHOS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+.page-title {
+    font-size: 30px;
+    color: #fff; /* Cor do antigo header */
+    margin-top: 100px; /* Espaço no topo para simular o início da seção */
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+}
+
+.page-subtitle {
+    font-size: 25px;
+    color: #e91e63;
+    text-align: center;
+    margin-bottom: 40px; /* Espaço antes da grade de projetos */
+    opacity: 0.9;
+    font-weight: 600;
 }
 
 /* Grid de Projetos */
