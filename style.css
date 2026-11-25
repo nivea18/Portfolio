@@ -18,6 +18,7 @@ h1,h2,h3{font-family:var(--titulo);font-weight:700;line-height:1.15;letter-spaci
 header{position:sticky;top:0;z-index:10;background:var(--preto);border-bottom:1px solid var(--linha)}
 header .container{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-top:1rem;padding-bottom:1rem}
 .logo{font:700 1.05rem var(--titulo);text-decoration:none}
+.logo::before{content:none}
 nav{display:flex;gap:1.6rem;flex-wrap:wrap}
 nav a{text-decoration:none;color:var(--mudo);font-weight:500;padding:.2rem 0;border-bottom:2px solid transparent}
 nav a:hover{color:var(--texto)}
