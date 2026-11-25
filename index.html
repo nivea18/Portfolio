@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-<title>Nívea Portfólio</title>
+<title>Nívea Maria | Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,12 +13,12 @@
 <header>
   <div class="container">
     <a href="index.html" class="logo">Nívea Maria</a>
-    <nav aria-label="Principal">
-      <a href="index.html" aria-current="page">Início</a>
-      <a href="trabalhos.html">Trabalhos</a>
-      <a href="habilidades.html">Habilidades</a>
-      <a href="educacao.html">Educação</a>
-      <a href="contato.html">Contato</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="trabalhos.html">Projects</a>
+      <a href="habilidades.html">Skills</a>
+      <a href="educacao.html">Education</a>
+      <a href="contato.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -26,21 +26,20 @@
   <section class="hero">
     <div class="container">
       <div>
-        <h1>Oi! meu nome é Nívea.</h1>
-        <p class="papel">sou uma <span id="digitando">desenvolvedora front-end</span></p>
-        <p class="bio">Meu nome é Nívea Maria, sou freelancer e também sou uma estudante de ADS e sou apaixonada na criação de sites, principalmente na criação do front-end.</p>
+        <h1>Hello! My name is Nívea.</h1>
+        <p class="papel">I am a <span id="digitando">front-end developer</span></p>
+        <p class="bio">My name is Nívea Maria. I am a freelance developer and a Systems Analysis and Development student. I love building websites, especially front-end experiences.</p>
         <div class="acoes">
-          <a class="btn cheio" href="mailto:niveamariademelosantos80@gmail.com">Me contrate</a>
-          <a class="btn vazio" href="trabalhos.html">Ver trabalhos</a>
+          <a class="btn cheio" href="mailto:niveamariademelosantos80@gmail.com">Hire me</a>
+          <a class="btn vazio" href="trabalhos.html">View projects</a>
         </div>
         <div class="redes">
           <a href="https://www.linkedin.com/in/n%C3%ADvea-maria-817346335/">LinkedIn</a>
           <a href="https://github.com/nivea18">GitHub</a>
-          <a href="https://www.instagram.com/niveaa09/">Instagram</a>
         </div>
       </div>
       <div class="foto">
-        <img src="images/notebook.png" alt="Notebook com código na tela">
+        <img src="images/notebook.png" alt="Laptop displaying code on screen">
       </div>
     </div>
   </section>
@@ -50,7 +49,7 @@
 (function(){
   var el=document.getElementById('digitando');
   if(!el||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  var frases=['desenvolvedora front-end','estudante de ADS','freelancer'],f=0,c=0,apagando=false;
+  var frases=['front-end developer','Systems Analysis and Development student','freelancer'],f=0,c=0,apagando=false;
   function passo(){
     var t=frases[f];
     el.textContent=t.slice(0,c);
