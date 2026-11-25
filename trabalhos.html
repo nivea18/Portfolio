@@ -1,110 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus trabalhos</title>
-    <link rel="stylesheet" href="style.css">
-
+<title>Meus trabalhos</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-       <header>
-        <a href="index.html" class="logo">Nívea Maria</a>
-
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="trabalhos.html" class="active">Meus trabalhos</a>
-            <a href="habilidades.html">Habilidades</a>
-            <a href="educacao.html">Educação</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+<header>
+  <div class="container">
+    <a href="index.html" class="logo">Nívea Maria</a>
+    <nav aria-label="Principal">
+      <a href="index.html">Início</a>
+      <a href="trabalhos.html" aria-current="page">Trabalhos</a>
+      <a href="habilidades.html">Habilidades</a>
+      <a href="educacao.html">Educação</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </div>
 </header>
-    <main class="container">
-        <h1 class="page-title">PROJETOS RECENTES</h1> 
-        <p class="page-subtitle">MINHA SELEÇÃO DE SITES DESENVOLVIDOS.</p>
-
-
-        <section class="portfolio-grid">
-            
-       
-            <div class="project-card">
-                <div class="project-image-wrapper">
-                    <img src="images/coastal.png" alt="Mockup do e-commerce Loja Y" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>Coastal Heaven - Projeto Fictício</h3>
-                    <p>Site fictício com tom tropical e dinâmico da empresa Coastal Heaven, empresa que ajuda usuários a encontrarem as melhores praias, ilhas, e diversas outras aventuras tropicais</p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>Java Script</span>
-                        <span>Design Responsivo</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://nivea18.github.io/coastalheaven/" target="_blank" class="btn primary">Ver Site</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image-wrapper">
-                    <img src="images/YOMEAL.png" alt="Mockup da Landing Page Evento Z" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>YoMeal - Landing Page</h3>
-                    <p>Desenvolvimento de uma landing page de um restaurante fictício YoMeal, com foco em mostrar avaliaçoes dos clientes e cardápios online.</p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>Responsivo</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://nivea18.github.io/Landing-Page-yomeal-/" target="_blank" class="btn primary">Ver Site</a>
-                    </div>
-                </div>
-            </div>
-
-
-                 <div class="project-card">
-                <div class="project-image-wrapper">
-                    <img src="images/neon.png" alt="Neon Innovation - Projeto Fictício" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>Neon Innovation - Projeto Fictício</h3>
-                    <p>Site fictício e moderno de uma empresa fictícia chamada Neon Innovation, com o intuito de ajudar programadores no mercado de trabalho.</p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>Design Responsivo</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://nivea18.github.io/Neon-Innovation/" target="_blank" class="btn primary">Ver Site</a>
-                    </div>
-                </div>
-            </div>
-            
-            
-            <div class="project-card">
-                <div class="project-image-wrapper">
-                    <img src="images/sistema.png" alt="Mockup da Landing Page Evento Z" class="project-image">
-                </div>
-                <div class="project-info">
-                    <h3>Sistema de atendimento</h3>
-                    <p>Sistema de atendimento com foco em facilitar a gestão de atendimentos e organização, seja de um hospital, banco ou qualquer outro setor que necessita de uma gestão de filas e chamadas.</p>
-                    <div class="project-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://aesthetic-taiyaki-c92922.netlify.app/" target="_blank" class="btn primary">Ver Site</a>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-    </main>
+<main>
+  <section class="pagina">
+    <div class="container">
+      <h1>Projetos recentes</h1>
+      <p class="sub">Minha seleção de sites desenvolvidos.</p>
+      <article class="projeto">
+        <div class="janela">
+          <div class="barra"><span></span><span></span><span></span></div>
+          <img src="images/coastal.png" alt="Captura do site Coastal Heaven" loading="lazy">
+        </div>
+        <div>
+          <h3>Coastal Heaven - Projeto Fictício</h3>
+          <p>Site fictício com tom tropical e dinâmico da empresa Coastal Heaven, empresa que ajuda usuários a encontrarem as melhores praias, ilhas, e diversas outras aventuras tropicais.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Design Responsivo</li></ul>
+          <a class="ver" href="https://nivea18.github.io/coastalheaven/">Ver site</a>
+        </div>
+      </article>
+      <article class="projeto">
+        <div class="janela">
+          <div class="barra"><span></span><span></span><span></span></div>
+          <img src="images/YOMEAL.png" alt="Captura da landing page do restaurante YoMeal" loading="lazy">
+        </div>
+        <div>
+          <h3>YoMeal - Landing Page</h3>
+          <p>Desenvolvimento de uma landing page de um restaurante fictício YoMeal, com foco em mostrar avaliações dos clientes e cardápios online.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>Responsivo</li><li>JavaScript</li></ul>
+          <a class="ver" href="https://nivea18.github.io/Landing-Page-yomeal-/">Ver site</a>
+        </div>
+      </article>
+      <article class="projeto">
+        <div class="janela">
+          <div class="barra"><span></span><span></span><span></span></div>
+          <img src="images/neon.png" alt="Captura do site Neon Innovation" loading="lazy">
+        </div>
+        <div>
+          <h3>Neon Innovation - Projeto Fictício</h3>
+          <p>Site fictício e moderno de uma empresa fictícia chamada Neon Innovation, com o intuito de ajudar programadores no mercado de trabalho.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>Design Responsivo</li></ul>
+          <a class="ver" href="https://nivea18.github.io/Neon-Innovation/">Ver site</a>
+        </div>
+      </article>
+      <article class="projeto">
+        <div class="janela">
+          <div class="barra"><span></span><span></span><span></span></div>
+          <img src="images/sistema.png" alt="Captura do sistema de atendimento" loading="lazy">
+        </div>
+        <div>
+          <h3>Sistema de atendimento</h3>
+          <p>Sistema de atendimento com foco em facilitar a gestão de atendimentos e organização, seja de um hospital, banco ou qualquer outro setor que necessita de uma gestão de filas e chamadas.</p>
+          <ul class="chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+          <a class="ver" href="https://aesthetic-taiyaki-c92922.netlify.app/">Ver site</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</main>
+<footer><div class="container">Nívea Maria</div></footer>
 </body>
 </html>
